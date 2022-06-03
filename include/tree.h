@@ -5,7 +5,7 @@
 #include <string>
 
 class Tree {
-private:
+ private:
     struct Node {
         char value;
         std::vector<Node*> listok;
@@ -18,7 +18,7 @@ private:
         if (root->value != '*') {
             for (auto syn = path.begin(); syn != path.end(); syn++)
                 if (*syn == root->value) {
-                    path.erase(syn); 
+                    path.erase(syn);
                     break;
                 }
         }
@@ -43,7 +43,7 @@ private:
             swapp(root->listok[i], let);
     }
 
-public:
+ public:
     std::string operator[](int i) const {
         if (i >= sw.size()) return "";
         return sw[i];
